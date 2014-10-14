@@ -19,6 +19,6 @@
 #
 ##############################################################################
 
-import sale_margin_line
+import sale_line_margin
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
