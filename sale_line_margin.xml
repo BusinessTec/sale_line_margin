@@ -1,22 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <openerp>
-  	<data>
-
-    <!-- PRODUCT PRICES TREE -->
-
-    
-    <record model="ir.ui.view" id="sale.line_margin">
-        <field name="name">sale.order.line.margin.form</field>
-        <field name="model">sale.order.line</field>
-        <field name="inherit_id" ref="sale.view_order_form"/>
-        <field name="arch" type="xml">
-       <xpath expr="//field[@name='price_unit']" position="after">
-                    <field name="mar_p"/>
-            </xpath>
-
-        </field>
+  <data>
+    <record model="ir.ui.view" id="sale_line_margin_sale_order_line">
+      <field name="name">sale.order.line.2.margin.view.form</field>
+      <field name="model">sale.order</field>
+      <field name="inherit_id" ref="sale.view_order_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='order_line']/form//field[@name='price_unit']" position="after">
+          <field name="mar_p"/>
+        </xpath>
+      </field>
     </record>
-
-  	</data>
-  	
+    <record model="ir.ui.view" id="sale_line_margin_sale_order_line_form">
+      <field name="name">sale.order.line.2.tree.margin.view.form</field>
+      <field name="model">sale.order</field>
+      <field name="inherit_id" ref="sale.view_order_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='order_line']/tree//field[@name='price_unit']" position="after">
+          <field name="mar_p"/>
+        </xpath>
+      </field>
+    </record>
+  </data>
 </openerp>
